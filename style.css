@@ -8,6 +8,34 @@ body {
     scroll-behavior: smooth; /* Kích hoạt cuộn mượt mặc định (nếu trình duyệt hỗ trợ) */
 }
 
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey border */
+    border-top: 8px solid #3498db; /* Blue border */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 header {
     background-color: #333;
     color: white;
@@ -54,40 +82,37 @@ nav ul li a:hover {
 }
 
 .hero {
-    background-color: #eee;
-    padding: 100px 0;
+    background-image: url('your-hero-background.jpg'); /* Thay thế bằng đường dẫn ảnh của bạn */
+    background-attachment: fixed; /* Hiệu ứng parallax */
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0; /* Tăng padding để thấy rõ hiệu ứng */
     text-align: center;
+    color: white; /* Đảm bảo chữ nổi bật trên nền */
+    position: relative; /* Cần thiết cho lớp phủ (nếu có) */
+}
+
+.hero::before { /* Lớp phủ để làm tối ảnh nền nếu cần */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ trong suốt */
 }
 
 .hero-content {
+    position: relative; /* Đưa nội dung lên trên lớp phủ */
+    z-index: 1;
     max-width: 800px;
     margin: 0 auto;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-.button {
-    display: inline-block;
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.button:hover {
-    background-color: #0056b3;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+.hero h1,
+.hero p,
+.hero .button {
+    color: white; /* Đảm bảo chữ trắng */
 }
 
 .section {
@@ -189,79 +214,4 @@ nav ul li a:hover {
 }
 
 .project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.project-overlay h3,
-.project-overlay p,
-.project-overlay a {
-    margin-bottom: 10px;
-}
-
-.project-overlay a {
-    border: 1px solid white;
-    padding: 8px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    transition: background-color 0.3s ease;
-}
-
-.project-overlay a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.contact-content {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-.contact-content p {
-    margin-bottom: 20px;
-}
-
-.contact-content ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 30px;
-}
-
-.contact-content ul li {
-    margin-bottom: 10px;
-}
-
-.contact-content ul li a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.contact-content ul li a:hover {
-    color: #00bfff;
-    text-decoration: underline;
-    transform: translateX(5px);
-}
-
-.contact-content form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-content input,
-.
+    position: absolute
