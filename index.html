@@ -6,7 +6,9 @@
     <title>Giới thiệu bản thân</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <script src="https://unpkg.com/scrollreveal"></script> </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css" integrity="sha512-kwJUhJGo+KNRTRhaVI3ahMxvJ0TIZOmq7YnFjw+cBStkyvcGdtouRIBubefhZ5uMX2YyfefCvxx72FIhRmXVcBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
 <body>
     <div id="preloader">
         <div class="loader"></div>
@@ -35,7 +37,7 @@
     <section id="about" class="about section">
         <h2 class="animate-scroll-up">Giới thiệu về tôi</h2>
         <div class="about-content">
-            <img src="your-profile-image.jpg" alt="Ảnh của bạn" class="profile-image animate-scroll-left">
+            <img src="your-profile-image.jpg" alt="Ảnh của bạn" class="profile-scroll-left">
             <p class="animate-scroll-right" data-sr-delay="300">
                 Đây là phần giới thiệu chi tiết về bạn. Bạn có thể nói về kinh nghiệm, đam mê, mục tiêu, và những điều khiến bạn đặc biệt. Hãy làm cho nó hấp dẫn và thu hút người đọc.
             </p>
@@ -71,29 +73,25 @@
 
     <section id="portfolio" class="portfolio section">
         <h2 class="animate-scroll-up">Dự án nổi bật</h2>
-        <div class="portfolio-grid">
-            <div class="project-item animate-scroll-up">
-                <img src="project1.jpg" alt="Dự án 1">
+        <div class="portfolio-grid" id="lightgallery">
+            <a href="large-project1.jpg" data-lightbox="mygallery" class="project-item animate-scroll-up">
+                <img src="thumbnail-project1.jpg" alt="Dự án 1">
                 <div class="project-overlay">
                     <h3>Dự án 1</h3>
-                    <p>Mô tả chi tiết hơn về dự án 1.</p>
-                    <a href="#">Xem chi tiết</a>
+                    <p>Xem chi tiết</p>
                 </div>
                 <h3>Dự án 1</h3>
                 <p>Mô tả ngắn về dự án 1.</p>
-                <a href="#">Xem chi tiết</a>
-            </div>
-            <div class="project-item animate-scroll-up" data-sr-delay="200">
-                <img src="project2.jpg" alt="Dự án 2">
+            </a>
+            <a href="large-project2.jpg" data-lightbox="mygallery" class="project-item animate-scroll-up" data-sr-delay="200">
+                <img src="thumbnail-project2.jpg" alt="Dự án 2">
                 <div class="project-overlay">
                     <h3>Dự án 2</h3>
-                    <p>Mô tả chi tiết hơn về dự án 2.</p>
-                    <a href="#">Xem chi tiết</a>
+                    <p>Xem chi tiết</p>
                 </div>
                 <h3>Dự án 2</h3>
                 <p>Mô tả ngắn về dự án 2.</p>
-                <a href="#">Xem chi tiết</a>
-            </div>
+            </a>
             </div>
     </section>
 
@@ -107,9 +105,9 @@
                 <li>GitHub: <a href="your-github-profile" target="_blank">Your GitHub</a></li>
                 </ul>
             <form>
-                <input type="text" placeholder="Tên của bạn">
-                <input type="email" placeholder="Địa chỉ email của bạn">
-                <textarea placeholder="Nội dung tin nhắn"></textarea>
+                <input type="text" placeholder="Tên của bạn" required>
+                <input type="email" placeholder="Địa chỉ email của bạn" required>
+                <textarea placeholder="Nội dung tin nhắn" required></textarea>
                 <button type="submit" class="button">Gửi tin nhắn</button>
             </form>
         </div>
@@ -186,12 +184,21 @@
             document.getElementById('preloader').style.display = 'none';
         }
 
+        // Lightgallery initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            const gallery = document.getElementById('lightgallery');
+            if (gallery) {
+                lightGallery(gallery);
+            }
+        });
+
         // ScrollReveal initialization
         ScrollReveal({ reset: false });
         ScrollReveal().reveal('.animate-scroll-up', { delay: 100, distance: '50px', origin: 'bottom', easing: 'ease-out' });
         ScrollReveal().reveal('.animate-scroll-left', { delay: 200, distance: '80px', origin: 'left', easing: 'ease-out' });
         ScrollReveal().reveal('.animate-scroll-right', { delay: 300, distance: '80px', origin: 'right', easing: 'ease-out' });
         ScrollReveal().reveal('.animate-scroll-zoom', { delay: 400, scale: 0.8, easing: 'ease-out' });
+        ScrollReveal().reveal('.profile-scroll-left', { delay: 250, distance: '60px', origin: 'left', easing: 'ease-out' });
     </script>
 </body>
 </html>
