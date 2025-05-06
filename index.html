@@ -15,9 +15,9 @@
     </div>
 
     <header>
-        <nav>
+        <nav class="container">
             <div class="logo">Your Name</div>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="#about">Giới thiệu</a></li>
                 <li><a href="#skills">Kỹ năng</a></li>
                 <li><a href="#portfolio">Dự án</a></li>
@@ -28,197 +28,123 @@
     </header>
 
     <section id="hero" class="hero">
-        <div class="hero-content">
+        <div class="container hero-content">
             <h1 class="animate__animated animate__fadeInDown">Chào mừng đến với trang của tôi!</h1>
             <p class="animate__animated animate__fadeInUp animate__delay-1s">Tôi là [Nghề nghiệp của bạn], một người đam mê [Sở thích/Lĩnh vực của bạn].</p>
-            <a href="#about" class="button animate__animated animate__pulse animate__infinite animate__delay-2s">Tìm hiểu thêm</a>
+            <a href="#about" class="button primary-button animate__animated animate__pulse animate__infinite animate__delay-2s">Tìm hiểu thêm</a>
         </div>
     </section>
 
     <section id="about" class="about section">
-        <h2 class="animate-scroll-up">Giới thiệu về tôi</h2>
-        <div class="about-content">
-            <img src="your-profile-image.jpg" alt="Ảnh của bạn" class="profile-scroll-left">
-            <p class="animate-scroll-right" data-sr-delay="300">
-                Đây là phần giới thiệu chi tiết về bạn. Bạn có thể nói về kinh nghiệm, đam mê, mục tiêu, và những điều khiến bạn đặc biệt. Hãy làm cho nó hấp dẫn và thu hút người đọc.
-            </p>
+        <div class="container">
+            <h2 class="section-title animate-scroll-up">Giới thiệu về tôi</h2>
+            <div class="about-content">
+                <img src="your-profile-image.jpg" alt="Ảnh của bạn" class="profile-image animate-scroll-left">
+                <p class="animate-scroll-right" data-sr-delay="300">
+                    Đây là phần giới thiệu chi tiết về bạn. Bạn có thể nói về kinh nghiệm, đam mê, mục tiêu, và những điều khiến bạn đặc biệt. Hãy làm cho nó hấp dẫn và thu hút người đọc.
+                </p>
+            </div>
         </div>
     </section>
 
-    <section id="skills" class="skills section">
-        <h2 class="animate-scroll-up">Kỹ năng của tôi</h2>
-        <div class="skills-content">
-            <div class="skill-item animate-scroll-left">
-                <h3>Kỹ năng 1</h3>
-                <div class="progress-bar" data-progress="80">
-                    <div class="progress"></div>
-                    <span class="progress-value">80%</span>
+    <section id="skills" class="skills section bg-light">
+        <div class="container">
+            <h2 class="section-title animate-scroll-up">Kỹ năng của tôi</h2>
+            <div class="skills-grid">
+                <div class="skill-item animate-scroll-left">
+                    <h3>Kỹ năng 1</h3>
+                    <div class="progress-bar" data-progress="80">
+                        <div class="progress"></div>
+                        <span class="progress-value">80%</span>
+                    </div>
                 </div>
-            </div>
-            <div class="skill-item animate-scroll-right" data-sr-delay="200">
-                <h3>Kỹ năng 2</h3>
-                <div class="progress-bar" data-progress="90">
-                    <div class="progress"></div>
-                    <span class="progress-value">90%</span>
+                <div class="skill-item animate-scroll-right" data-sr-delay="200">
+                    <h3>Kỹ năng 2</h3>
+                    <div class="progress-bar" data-progress="90">
+                        <div class="progress"></div>
+                        <span class="progress-value">90%</span>
+                    </div>
                 </div>
-            </div>
-            <div class="skill-item animate-scroll-left" data-sr-delay="400">
-                <h3>Kỹ năng 3</h3>
-                <div class="progress-bar" data-progress="70">
-                    <div class="progress"></div>
-                    <span class="progress-value">70%</span>
+                <div class="skill-item animate-scroll-left" data-sr-delay="400">
+                    <h3>Kỹ năng 3</h3>
+                    <div class="progress-bar" data-progress="70">
+                        <div class="progress"></div>
+                        <span class="progress-value">70%</span>
+                    </div>
                 </div>
-            </div>
-            </div>
+                </div>
+        </div>
     </section>
 
     <section id="portfolio" class="portfolio section">
-        <h2 class="animate-scroll-up">Dự án nổi bật</h2>
-        <div class="portfolio-grid" id="lightgallery">
-            <a href="large-project1.jpg" data-lightbox="mygallery" class="project-item animate-scroll-up">
-                <img src="thumbnail-project1.jpg" alt="Dự án 1">
-                <div class="project-overlay">
+        <div class="container">
+            <h2 class="section-title animate-scroll-up">Dự án nổi bật</h2>
+            <div class="portfolio-grid" id="lightgallery">
+                <a href="large-project1.jpg" data-lightbox="mygallery" class="project-item animate-scroll-up">
+                    <img src="thumbnail-project1.jpg" alt="Dự án 1">
+                    <div class="project-overlay">
+                        <h3>Dự án 1</h3>
+                        <p>Xem chi tiết</p>
+                    </div>
                     <h3>Dự án 1</h3>
-                    <p>Xem chi tiết</p>
-                </div>
-                <h3>Dự án 1</h3>
-                <p>Mô tả ngắn về dự án 1.</p>
-            </a>
-            <a href="large-project2.jpg" data-lightbox="mygallery" class="project-item animate-scroll-up" data-sr-delay="200">
-                <img src="thumbnail-project2.jpg" alt="Dự án 2">
-                <div class="project-overlay">
+                    <p>Mô tả ngắn về dự án 1.</p>
+                </a>
+                <a href="large-project2.jpg" data-lightbox="mygallery" class="project-item animate-scroll-up" data-sr-delay="200">
+                    <img src="thumbnail-project2.jpg" alt="Dự án 2">
+                    <div class="project-overlay">
+                        <h3>Dự án 2</h3>
+                        <p>Xem chi tiết</p>
+                    </div>
                     <h3>Dự án 2</h3>
-                    <p>Xem chi tiết</p>
+                    <p>Mô tả ngắn về dự án 2.</p>
+                </a>
                 </div>
-                <h3>Dự án 2</h3>
-                <p>Mô tả ngắn về dự án 2.</p>
-            </a>
-            </div>
+        </div>
     </section>
 
-    <section id="blog" class="blog section">
-        <h2 class="animate-scroll-up">Bài viết gần đây</h2>
-        <div class="blog-grid">
-            <div class="blog-item animate-scroll-up">
-                <h3>Tiêu đề bài viết 1</h3>
-                <p>Mô tả ngắn về bài viết 1...</p>
-                <a href="blog-post-1.html">Đọc thêm</a>
+    <section id="blog" class="blog section bg-light">
+        <div class="container">
+            <h2 class="section-title animate-scroll-up">Bài viết gần đây</h2>
+            <div class="blog-grid">
+                <div class="blog-item animate-scroll-up">
+                    <h3>Tiêu đề bài viết 1</h3>
+                    <p>Mô tả ngắn về bài viết 1...</p>
+                    <a href="blog-post-1.html" class="button secondary-button">Đọc thêm</a>
+                </div>
+                <div class="blog-item animate-scroll-up" data-sr-delay="200">
+                    <h3>Tiêu đề bài viết 2</h3>
+                    <p>Mô tả ngắn về bài viết 2...</p>
+                    <a href="blog-post-2.html" class="button secondary-button">Đọc thêm</a>
+                </div>
+                </div>
+            <div class="blog-navigation">
+                <a href="#" class="button primary-button">Xem tất cả bài viết</a>
             </div>
-            <div class="blog-item animate-scroll-up" data-sr-delay="200">
-                <h3>Tiêu đề bài viết 2</h3>
-                <p>Mô tả ngắn về bài viết 2...</p>
-                <a href="blog-post-2.html">Đọc thêm</a>
-            </div>
-            </div>
-        <div class="blog-navigation">
-            <a href="#">Xem tất cả bài viết</a>
         </div>
     </section>
 
     <section id="contact" class="contact section">
-        <h2 class="animate-scroll-up">Liên hệ với tôi</h2>
-        <div class="contact-content animate-scroll-zoom">
-            <p>Bạn có muốn hợp tác hoặc trao đổi? Hãy liên hệ với tôi qua thông tin dưới đây:</p>
-            <ul>
-                <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
-                <li>LinkedIn: <a href="your-linkedin-profile" target="_blank">Your LinkedIn</a></li>
-                <li>GitHub: <a href="your-github-profile" target="_blank">Your GitHub</a></li>
-                </ul>
-            <form>
-                <input type="text" placeholder="Tên của bạn" required>
-                <input type="email" placeholder="Địa chỉ email của bạn" required>
-                <textarea placeholder="Nội dung tin nhắn" required></textarea>
-                <button type="submit" class="button">Gửi tin nhắn</button>
-            </form>
+        <div class="container">
+            <h2 class="section-title animate-scroll-up">Liên hệ với tôi</h2>
+            <div class="contact-content animate-scroll-zoom">
+                <p>Bạn có muốn hợp tác hoặc trao đổi? Hãy liên hệ với tôi qua thông tin dưới đây:</p>
+                <ul class="contact-list">
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+                    <li><i class="fab fa-linkedin"></i> <a href="your-linkedin-profile" target="_blank">Your LinkedIn</a></li>
+                    <li><i class="fab fa-github"></i> <a href="your-github-profile" target="_blank">Your GitHub</a></li>
+                    </ul>
+                <form class="contact-form">
+                    <input type="text" placeholder="Tên của bạn" required>
+                    <input type="email" placeholder="Địa chỉ email của bạn" required>
+                    <textarea placeholder="Nội dung tin nhắn" required></textarea>
+                    <button type="submit" class="button primary-button">Gửi tin nhắn</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Your Name. All rights reserved.</p>
+        </div>
     </footer>
-
-    <button id="back-to-top" title="Về đầu trang">^</button>
-
-    <script>
-        // Cuộn mượt cho menu điều hướng
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('nav a');
-
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 60, // Trừ đi chiều cao header (nếu sticky)
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
-
-        // Hiệu ứng thanh tiến trình kỹ năng khi cuộn
-        document.addEventListener('DOMContentLoaded', function() {
-            const skillItems = document.querySelectorAll('.skill-item');
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const progressBar = entry.target.querySelector('.progress-bar');
-                        const progress = progressBar.querySelector('.progress');
-                        const progressValue = progressBar.dataset.progress;
-
-                        progress.style.width = progressValue + '%';
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 });
-
-            skillItems.forEach(item => {
-                observer.observe(item);
-            });
-        });
-
-        // Nút "Về đầu trang"
-        document.addEventListener('DOMContentLoaded', function() {
-            const backToTopButton = document.getElementById("back-to-top");
-
-            window.onscroll = function() {
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                    backToTopButton.style.display = "block";
-                } else {
-                    backToTopButton.style.display = "none";
-                }
-            };
-
-            backToTopButton.addEventListener('click', function() {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        });
-
-        // Preloader
-        window.onload = function() {
-            document.getElementById('preloader').style.display = 'none';
-        }
-
-        // Lightgallery initialization
-        document.addEventListener('DOMContentLoaded', () => {
-            const gallery = document.getElementById('lightgallery');
-            if (gallery) {
-                lightGallery(gallery);
-            }
-        });
-
-        // ScrollReveal initialization
-        ScrollReveal({ reset: false });
-        ScrollReveal().reveal('.animate-scroll-up', { delay: 100, distance: '50px', origin: 'bottom', easing: 'ease-out' });
-        ScrollReveal().reveal('.animate-scroll-left', { delay: 200, distance: '80px', origin: 'left', easing: 'ease-out' });
-        ScrollReveal().reveal('.animate-scroll-right', { delay: 300, distance: '80px', origin: 'right', easing: 'ease-out' });
-        ScrollReveal().reveal('.animate-scroll-zoom', { delay: 400, scale: 0.8, easing: 'ease-out' });
-        ScrollReveal().reveal('.profile-scroll-left', { delay: 250, distance: '60px', origin: 'left', easing: 'ease-out' });
-    </script>
-</body>
-</html>
